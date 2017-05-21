@@ -1,6 +1,6 @@
 # JEC JUTA Project
 
-JEC JUTA is a [JavaScript Entreprise Container][jec-url] project focused on the portability of JEC applications.
+JEC JUTA is a [JavaScript Entreprise Container][jec-url] project focused on the portability of unit tests for JEC applications.
 
 [![][jec-logo]][jec-url]
 
