@@ -54,3 +54,10 @@ src/**/*.js
 
 # Ignore JavaScript files in test folder
 test/**/*.js
+
+#####################################
+# utils
+#####################################
+
+# Ignore JavaScript files in utils folder
+utils/**/*.js
