@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target":"ES6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "diagnostics": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": "."
+  },
+  "filesGlob": [
+    "./src/**/*.ts",
+    "./test/**/*.ts",
+    "./utils/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings/**/*"
+  ]
+}
