@@ -21,6 +21,7 @@ import {ClassLoader, DecoratorConnectorManager, JcadContextManager, JcadContext,
         JcadContextFactory, DecoratorConnector, AbstractDecoratorConnector,
         Decorator} from "jec-commons";
 import {JutaConnectorRefs} from "../../../../../src/com/jec/juta/jcad/JutaConnectorRefs";
+import {TestSuiteParams} from "../../../../../src/com/jec/juta/annotations/core/TestSuiteParams";
 import * as params from "../../../../../utils/test-utils/annotations/Params";
 
 const expect = chai.expect;
@@ -36,7 +37,7 @@ let ClassRef:any = null;
 let annotated:any = null;
 class TestConnector extends AbstractDecoratorConnector {}
 class TestDecorator implements Decorator {
-  decorate(target:any, key:string, descriptor:PropertyDescriptor):any { return target; }
+  decorate(target:any, params:TestSuiteParams):any { return target; }
 }
 const TEST_DECORATOR:Decorator = new TestDecorator();
 const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
