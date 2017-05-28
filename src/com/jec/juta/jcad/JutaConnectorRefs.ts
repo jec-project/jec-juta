@@ -61,4 +61,12 @@ export class JutaConnectorRefs {
    */
   public static readonly AFTER_CONNECTOR_REF:string =
                                                "com.jec.juta.annotations.After";
+  
+  /**
+   * Defines the reference for connectors tha must be used to interact with the
+   * <code>@Async</code> decorator.
+   */
+  public static readonly ASYNC_CONNECTOR_REF:string =
+                                               "com.jec.juta.annotations.Async";
+                                               
 }

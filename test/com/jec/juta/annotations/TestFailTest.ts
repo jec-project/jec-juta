@@ -16,20 +16,14 @@
 
 import "mocha";
 import {expect} from "chai";
-import {ClassLoader} from "jec-commons";
 
 // Utilities:
-const VALID_CLASS:string = process.cwd() + "/utils/test-utils/annotations/TestClass";
-const LOADER:ClassLoader = new ClassLoader();
-const buildClassRef:Function = function():void {
-  let ClassRef:any = LOADER.loadClass(VALID_CLASS);
-  new ClassRef();
-};
+import * as utils from "../../../../../utils/test-utils/utilities/TestFailTestUtils";
 
 // Test:
 describe("@Test", ()=> {
 
   it("should throw an error since no context has been declared for this decorator", function() {
-    expect(buildClassRef).to.throw(Error);
+    expect(utils.buildClassRef).to.throw(Error);
   });
 });

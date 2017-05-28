@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       }
     },
     test : {
-      src: ["test/**/*.ts"],
+      src: ["test/**/*.ts", "utils/**/*.ts"],
       options: {
         module: "commonjs",
         target: "es6",

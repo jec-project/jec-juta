@@ -14,32 +14,16 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {RunableTestSuite} from "./RunableTestSuite";
+import "mocha";
+import {expect} from "chai";
 
-/**
- * The <code>TestMethod</code> defines the basic set of APIs you must implement 
- * to create wrappers for testing methods of a test suite in the JUTA
- * specification.
- */
-export interface TestMethod {
+// Utilities:
+import * as utils from "../../../../../utils/test-utils/utilities/AsyncFailTestUtils";
 
-  /**
-   * Defines the description of this test method.
-   */
-  description:string;
-  
-  /**
-   * The name of this test method.
-   */
-  name:string;
-  
-  /**
-   * The timeout for this test method.
-   */
-  timeout:number;
-  
-  /**
-   * Defines the number of repetitions for this test method.
-   */
-  repeat:number;
-}
+// Test:
+describe("@Async", ()=> {
+
+  it("should throw an error since no context has been declared for this decorator", function() {
+    expect(utils.buildClassRef).to.throw(Error);
+  });
+});

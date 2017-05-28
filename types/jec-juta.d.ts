@@ -12,6 +12,7 @@ export interface AnnotatedMethodParams {
 
 export interface TestParams extends AnnotatedMethodParams {
     description: string;
+    repeat?: number;
 }
 
 export interface TestSuiteParams {
@@ -22,6 +23,8 @@ export interface TestSuiteParams {
 export function After(params?: AnnotatedMethodParams): Function;
 
 export function AfterClass(params?: AnnotatedMethodParams): Function;
+
+export function Async(target: Object, propertyKey: string | symbol, parameterIndex: number): void;
 
 export function Before(params?: AnnotatedMethodParams): Function;
 
@@ -61,6 +64,8 @@ export interface RunableTestSuite {
 export interface TestMethod {
     description: string;
     name: string;
+    repeat: number;
+    timeout: number;
 }
 
 export interface TestRunner {

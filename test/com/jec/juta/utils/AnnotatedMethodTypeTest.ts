@@ -20,37 +20,33 @@ import {expect} from "chai";
 // Class to test:
 import {AnnotatedMethodType} from "../../../../../src/com/jec/juta/utils/AnnotatedMethodType";
 
+// Utilities:
+import * as utils from "../../../../../utils/test-utils/utilities/AnnotatedMethodTypeTestUtils";
+
 // Test:
 describe("AnnotatedMethodType", ()=> {
 
   describe("#BEFORE_CLASS", ()=> {
     it("BEFORE_CLASS should return 0", function() {
-      expect(AnnotatedMethodType.BEFORE_CLASS).to.equal(BEFORE_CLASS);
+      expect(AnnotatedMethodType.BEFORE_CLASS).to.equal(utils.BEFORE_CLASS);
     });
   });
   
   describe("#AFTER_CLASS", ()=> {
     it("AFTER_CLASS should return 1", function() {
-      expect(AnnotatedMethodType.AFTER_CLASS).to.equal(AFTER_CLASS);
+      expect(AnnotatedMethodType.AFTER_CLASS).to.equal(utils.AFTER_CLASS);
     });
   });
   
   describe("#BEFORE", ()=> {
     it("BEFORE should return 2", function() {
-      expect(AnnotatedMethodType.BEFORE).to.equal(BEFORE);
+      expect(AnnotatedMethodType.BEFORE).to.equal(utils.BEFORE);
     });
   });
   
   describe("#AFTER", ()=> {
     it("AFTER should return 3", function() {
-      expect(AnnotatedMethodType.AFTER).to.equal(AFTER);
+      expect(AnnotatedMethodType.AFTER).to.equal(utils.AFTER);
     });
   });
 });
-
-// Utilities:
-// We store constants that should be defined by the AnnotatedMethodType enum:
-const BEFORE_CLASS:number = 0;
-const AFTER_CLASS:number = 1;
-const BEFORE:number = 2;
-const AFTER:number = 3;

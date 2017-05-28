@@ -24,14 +24,17 @@ import {DecoratorConnectorManager, JcadContextManager, JcadContext} from "jec-co
 import * as AfterAnnotation from "../../../../../src/com/jec/juta/annotations/After";
 
 // Utilities:
-import * as utils from "../../../../../utils/test-utils/utilities/AfterTestUtils";
+import * as utils from "../../../../../utils/test-utils/utilities/AsyncTestUtils";
 
 // Chai declarations:
 const expect:any = chai.expect;
 chai.use(spies);
 
+// Annotation to test:
+import * as AsyncAnnotation from "../../../../../src/com/jec/juta/annotations/Async";
+
 // Test:
-describe("After", ()=> {
+describe("Async", ()=> {
 
   let context:JcadContext = null;
 
@@ -47,27 +50,27 @@ describe("After", ()=> {
     utils.buildClassRef();
   });
 
-  describe("@After", ()=> {
+  describe("@Async", ()=> {
 
     let ctxmSpy:any = chai.spy.on(JcadContextManager.getInstance(), "getContext");
     let dcmSpy:any = chai.spy.on(DecoratorConnectorManager.getInstance(), "getDecorator");
     let decoratorSpy:any = chai.spy.on(utils.TEST_DECORATOR, "decorate");
-    let annotationSpy:any = chai.spy.on(AfterAnnotation, "After");
+    let annotationSpy:any = chai.spy.on(AsyncAnnotation, "Async");
 
-    it("should invoke the JcadContextManager with the JutaConnectorRefs.AFTER_CONNECTOR_REF reference", function() {
-      expect(ctxmSpy).to.have.been.called.with(JutaConnectorRefs.AFTER_CONNECTOR_REF);
+    it("should invoke the JcadContextManager with the JutaConnectorRefs.ASYNC_CONNECTOR_REF reference", function() {
+      expect(ctxmSpy).to.have.been.called.with(JutaConnectorRefs.ASYNC_CONNECTOR_REF);
     });
     
-    it("should invoke the DecoratorConnectorManager with the JutaConnectorRefs.AFTER_CONNECTOR_REF reference and the correct JCAD context", function() {
-      expect(dcmSpy).to.have.been.called.with(JutaConnectorRefs.AFTER_CONNECTOR_REF, context);
+    it("should invoke the DecoratorConnectorManager with the JutaConnectorRefs.ASYNC_CONNECTOR_REF reference and the correct JCAD context", function() {
+      expect(dcmSpy).to.have.been.called.with(JutaConnectorRefs.ASYNC_CONNECTOR_REF, context);
     });
     
     it("should invoke the annotation decorator with the right parameters", function() {
-      expect(annotationSpy).to.have.been.called.with(utils.params.ANNOTATED_METHOD_PARAMS);
+      expect(annotationSpy).to.have.been.called.with(utils.PROPERTY_KEY, utils.PARAMETER_INDEX);
     });
     
-    it("should invoke the registered decorator with the right method name and parameters", function() {
-      expect(decoratorSpy).to.have.been.called.with(utils.KEY, utils.params.ANNOTATED_METHOD_PARAMS);
+    it("should invoke the registered decorator with the right parameters", function() {
+      expect(decoratorSpy).to.have.been.called.with(utils.PROPERTY_KEY, utils.PARAMETER_INDEX);
     });
   });
 });

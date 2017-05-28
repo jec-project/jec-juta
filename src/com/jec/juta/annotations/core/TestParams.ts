@@ -26,4 +26,9 @@ export interface TestParams extends AnnotatedMethodParams {
    * The desciption for a test method.
    */
   description:string;
+  
+  /**
+   * The number of repetitions for an annotated method.
+   */
+  repeat?:number;
 }

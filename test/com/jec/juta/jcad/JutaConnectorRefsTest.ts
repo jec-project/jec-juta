@@ -20,51 +20,51 @@ import {expect} from "chai";
 // Class to test:
 import {JutaConnectorRefs} from "../../../../../src/com/jec/juta/jcad/JutaConnectorRefs";
 
+// Utilities:
+import * as utils from "../../../../../utils/test-utils/utilities/JutaConnectorRefsTestUtils";
+
 // Test:
 describe("JutaConnectorRefs", ()=> {
 
   describe("#TEST_CONNECTOR_REF", ()=> {
     it("TEST_CONNECTOR_REF should return 'com.jec.juta.annotations.Test'", function() {
-      expect(JutaConnectorRefs.TEST_CONNECTOR_REF).to.equal(TEST_CONNECTOR_REF);
+      expect(JutaConnectorRefs.TEST_CONNECTOR_REF).to.equal(utils.TEST_CONNECTOR_REF);
     });
   });
   
   describe("#TEST_SUITE_CONNECTOR_REF", ()=> {
     it("TEST_SUITE_CONNECTOR_REF should return 'com.jec.juta.annotations.TestSuite'", function() {
-      expect(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF).to.equal(TEST_SUITE_CONNECTOR_REF);
+      expect(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF).to.equal(utils.TEST_SUITE_CONNECTOR_REF);
     });
   });
   
   describe("#BEFORE_CLASS_CONNECTOR_REF", ()=> {
     it("BEFORE_CLASS_CONNECTOR_REF should return 'com.jec.juta.annotations.BeforeClass'", function() {
-      expect(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF).to.equal(BEFORE_CLASS_CONNECTOR_REF);
+      expect(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF).to.equal(utils.BEFORE_CLASS_CONNECTOR_REF);
     });
   });
   
   describe("#BEFORE_CONNECTOR_REF", ()=> {
     it("BEFORE_CONNECTOR_REF should return 'com.jec.juta.annotations.Before'", function() {
-      expect(JutaConnectorRefs.BEFORE_CONNECTOR_REF).to.equal(BEFORE_CONNECTOR_REF);
+      expect(JutaConnectorRefs.BEFORE_CONNECTOR_REF).to.equal(utils.BEFORE_CONNECTOR_REF);
     });
   });
   
   describe("#AFTER_CLASS_CONNECTOR_REF", ()=> {
     it("AFTER_CLASS_CONNECTOR_REF should return 'com.jec.juta.annotations.AfterClass'", function() {
-      expect(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF).to.equal(AFTER_CLASS_CONNECTOR_REF);
+      expect(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF).to.equal(utils.AFTER_CLASS_CONNECTOR_REF);
     });
   });
   
   describe("#AFTER_CONNECTOR_REF", ()=> {
     it("AFTER_CONNECTOR_REF should return 'com.jec.juta.annotations.After'", function() {
-      expect(JutaConnectorRefs.AFTER_CONNECTOR_REF).to.equal(AFTER_CONNECTOR_REF);
+      expect(JutaConnectorRefs.AFTER_CONNECTOR_REF).to.equal(utils.AFTER_CONNECTOR_REF);
+    });
+  });
+
+  describe("#ASYNC_CONNECTOR_REF", ()=> {
+    it("ASYNC_CONNECTOR_REF should return 'com.jec.juta.annotations.Async'", function() {
+      expect(JutaConnectorRefs.ASYNC_CONNECTOR_REF).to.equal(utils.ASYNC_CONNECTOR_REF);
     });
   });
 });
-
-// Utilities:
-// We store constants that should be defined by the JutaConnectorRefs class:
-const TEST_CONNECTOR_REF:string = "com.jec.juta.annotations.Test";
-const TEST_SUITE_CONNECTOR_REF:string = "com.jec.juta.annotations.TestSuite";
-const BEFORE_CLASS_CONNECTOR_REF:string = "com.jec.juta.annotations.BeforeClass";
-const BEFORE_CONNECTOR_REF:string = "com.jec.juta.annotations.Before";
-const AFTER_CLASS_CONNECTOR_REF:string = "com.jec.juta.annotations.AfterClass";
-const AFTER_CONNECTOR_REF:string = "com.jec.juta.annotations.After";

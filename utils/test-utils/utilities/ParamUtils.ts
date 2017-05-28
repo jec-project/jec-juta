@@ -8,7 +8,8 @@ export const ANNOTATED_METHOD_PARAMS:AnnotatedMethodParams = {
 
 export const TEST_PARAMS:TestParams = {
   timeout: 100,
-  description: "Test Params Description"
+  description: "Test Params Description",
+  repeat: 3
 };
 
 export const TEST_SUITE_PARAMS:TestSuiteParams = {

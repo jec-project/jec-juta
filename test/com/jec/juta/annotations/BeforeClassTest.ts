@@ -17,69 +17,41 @@
 import "mocha";
 import * as chai from "chai";
 import * as spies from "chai-spies";
-import {ClassLoader, DecoratorConnectorManager, JcadContextManager, JcadContext,
-        JcadContextFactory, DecoratorConnector, AbstractDecoratorConnector,
-        Decorator} from "jec-commons";
 import {JutaConnectorRefs} from "../../../../../src/com/jec/juta/jcad/JutaConnectorRefs";
-import {AnnotatedMethodParams} from "../../../../../src/com/jec/juta/annotations/core/AnnotatedMethodParams";
-import * as params from "../../../../../utils/test-utils/annotations/Params";
-
-const expect = chai.expect;
-chai.use(spies);
-
-// Utilities:
-let connector:DecoratorConnector = null;
-let context:JcadContext = null;
-let ClassRef:any = null;
-let annotated:any = null;
-class TestConnector extends AbstractDecoratorConnector {}
-class TestDecorator implements Decorator {
-  decorate(target:any, key:string, descriptor:PropertyDescriptor,
-           params?:AnnotatedMethodParams):any { return target; }
-}
-const TEST_DECORATOR:Decorator = new TestDecorator();
-const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
-const CTXM:JcadContextManager = JcadContextManager.getInstance();
-const VALID_CLASS:string = process.cwd() + "/utils/test-utils/annotations/BeforeClassTestClass";
-const KEY:string = "beforeClassMethod";
-const LOADER:ClassLoader = new ClassLoader();
+import {DecoratorConnectorManager, JcadContextManager, JcadContext} from "jec-commons";
 
 // Annotation to test:
 import * as BeforeClassAnnotation from "../../../../../src/com/jec/juta/annotations/BeforeClass";
 
+// Utilities:
+import * as utils from "../../../../../utils/test-utils/utilities/BeforeClassTestUtils";
+
+// Chai declarations:
+const expect:any = chai.expect;
+chai.use(spies);
+
 // Test:
 describe("BeforeClass", ()=> {
 
+  let context:JcadContext = null;
+
   before(()=> {
-    let factory:JcadContextFactory = new JcadContextFactory();
-    connector = new TestConnector(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF, TEST_DECORATOR);
-    context = factory.create();
-    CTXM.addContext(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF, context);
-    DCM.addConnector(connector, context);
+    context = utils.initContext();
   });
 
   after(()=> {
-    CTXM.removeContext(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF);
-    DCM.removeConnector(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF, context);
-    connector = null;
-    context = null;
+    utils.resetContext(context);
   });
 
   beforeEach(()=> {
-    ClassRef = LOADER.loadClass(VALID_CLASS);
-    annotated = new ClassRef();
-  });
-
-  afterEach(()=> {
-    ClassRef = null;
-    annotated =null;
+    utils.buildClassRef();
   });
 
   describe("@BeforeClass", ()=> {
 
-    let ctxmSpy:any = chai.spy.on(CTXM, "getContext");
-    let dcmSpy:any = chai.spy.on(DCM, "getDecorator");
-    let decoratorSpy:any = chai.spy.on(TEST_DECORATOR, "decorate");
+    let ctxmSpy:any = chai.spy.on(JcadContextManager.getInstance(), "getContext");
+    let dcmSpy:any = chai.spy.on(DecoratorConnectorManager.getInstance(), "getDecorator");
+    let decoratorSpy:any = chai.spy.on(utils.TEST_DECORATOR, "decorate");
     let annotationSpy:any = chai.spy.on(BeforeClassAnnotation, "BeforeClass");
 
     it("should invoke the JcadContextManager with the JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF reference", function() {
@@ -91,11 +63,11 @@ describe("BeforeClass", ()=> {
     });
     
     it("should invoke the annotation decorator with the right parameters", function() {
-      expect(annotationSpy).to.have.been.called.with(params.ANNOTATED_METHOD_PARAMS);
+      expect(annotationSpy).to.have.been.called.with(utils.params.ANNOTATED_METHOD_PARAMS);
     });
     
     it("should invoke the registered decorator with the right method name and parameters", function() {
-      expect(decoratorSpy).to.have.been.called.with(KEY, params.ANNOTATED_METHOD_PARAMS);
+      expect(decoratorSpy).to.have.been.called.with(utils.KEY, utils.params.ANNOTATED_METHOD_PARAMS);
     });
   });
 });

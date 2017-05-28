@@ -20,6 +20,9 @@ import {expect} from "chai";
 // Class to test:
 import {TestSuiteError} from "../../../../../src/com/jec/juta/exceptions/TestSuiteError";
 
+// Utilities:
+import * as utils from "../../../../../utils/test-utils/utilities/TestSuiteErrorTestUtils";
+
 // Test:
 describe("TestSuiteError", ()=> {
 
@@ -32,11 +35,8 @@ describe("TestSuiteError", ()=> {
 
   describe("#message", ()=> {
     it("should return the same string as passed in the class constructor", function() {
-      let error:TestSuiteError = new TestSuiteError(ERROR_MSG);
-      expect(error.message).to.equal(ERROR_MSG);
+      let error:TestSuiteError = new TestSuiteError(utils.ERROR_MSG);
+      expect(error.message).to.equal(utils.ERROR_MSG);
     });
   });
 });
-
-// Utilities:
-const ERROR_MSG:string = "invalid test suite";

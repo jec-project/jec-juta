@@ -18,6 +18,7 @@ export {TestParams} from "./annotations/core/TestParams";
 export {TestSuiteParams} from "./annotations/core/TestSuiteParams";
 //--> com/jec/juta/annotations
 export {After} from "./annotations/After";
+export {Async} from "./annotations/Async";
 export {AfterClass} from "./annotations/AfterClass";
 export {Before} from "./annotations/Before";
 export {BeforeClass} from "./annotations/BeforeClass";

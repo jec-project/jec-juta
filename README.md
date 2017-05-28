@@ -11,7 +11,7 @@ JUTA allows developers to write portable unit tests, independently from the unit
 testing framework they use. For example, the same test can be run from jasmine
 or mocha without changing anyting within your test suites (e.g. imports).
 
-JUTA test suites are written in [TypScript](https://www.typescriptlang.org/) and
+JUTA test suites are written in [TypeScript](https://www.typescriptlang.org/) and
 are based on the same kind of annotations than [Junit](http://junit.org/junit4/).
 
 With JUTA, test are more readable and become portable.
@@ -40,7 +40,7 @@ All JEC JUTA components have to be imported with the ES6 syntax:
 import { TestSuite, Test } from "jec-juta";
 
 @TestSuite({
-  description: "Tests the \"HelloWorld\ class methods."
+  description: "Tests the \"HelloWorld\" class methods."
 })
 export class HelloWorldTest {
   
@@ -79,7 +79,7 @@ The documentation generator is [TypeDoc](http://typedoc.org/)
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.0](CHANGELOG.md#jec-juta-1.0.0)
+**Current stable release:** [1.0.1](CHANGELOG.md#jec-juta-1.0.1)
  
 For a complete listing of release notes for all JEC JUTA update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 

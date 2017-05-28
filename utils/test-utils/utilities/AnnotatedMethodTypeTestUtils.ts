@@ -14,32 +14,13 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {RunableTestSuite} from "./RunableTestSuite";
-
-/**
- * The <code>TestMethod</code> defines the basic set of APIs you must implement 
- * to create wrappers for testing methods of a test suite in the JUTA
- * specification.
+/*!
+ * This module constains utilities used by the AnnotatedMethodTypeTest test
+ * suite.
  */
-export interface TestMethod {
 
-  /**
-   * Defines the description of this test method.
-   */
-  description:string;
-  
-  /**
-   * The name of this test method.
-   */
-  name:string;
-  
-  /**
-   * The timeout for this test method.
-   */
-  timeout:number;
-  
-  /**
-   * Defines the number of repetitions for this test method.
-   */
-  repeat:number;
-}
+// Utilities:
+export const BEFORE_CLASS:number = 0;
+export const AFTER_CLASS:number = 1;
+export const BEFORE:number = 2;
+export const AFTER:number = 3;
