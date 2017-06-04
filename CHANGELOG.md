@@ -14,6 +14,8 @@
 - **test repetitions:** add test repetitions for @Test annotations
 - **test utilities:** new utility files have been added to make test suites more readable
 - **@Async:** new annotation for declaring asynchrounous tests
+- **disabled:** indicates whether test methods and test suites have to be ignored or not
+- **TestSorters:** the API provides utilities for changing the test execution order
 
 <a name="jec-juta-1.0.0"></a>
 ## **1.0.0** (2017-05-21)

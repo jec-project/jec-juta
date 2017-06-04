@@ -68,4 +68,23 @@ export interface RunableTestSuite {
    *                                  <code>RunableTestSuite</code>.
    */
   getAnnotatedMethods():AnnotatedMethod[];
+
+  /**
+   * Returns a boolean that indicates whether this <code>RunableTestSuite</code>
+   * has to be ignored by the test runner (<code>true</code>), or not
+   * (<code>false</code>).
+   *
+   * @return {boolean} <code>true</code> whether this
+   *                   <code>RunableTestSuite</code> has to be ignored by the
+   *                   test runner; <code>false</code> otherwhise.
+   */
+  isDisabled():boolean;
+  
+  /**
+   * Returns a value that indicates the test execution order for a test suite.
+   * Possible values are the constants of the <code>TestSorters</code> enum.
+   *
+   * @return {number} a constant of the <code>TestSorters</code> enum.
+   */
+  getTestOrder():number;
 }

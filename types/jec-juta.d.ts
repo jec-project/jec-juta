@@ -8,16 +8,20 @@ declare module "jec-juta" {
 
 export interface AnnotatedMethodParams {
     timeout?: number;
+    async?: boolean;
+    disabled?: boolean;
 }
 
 export interface TestParams extends AnnotatedMethodParams {
     description: string;
     repeat?: number;
+    order?: number;
 }
 
 export interface TestSuiteParams {
     description: string;
-    timeout?: number;
+    disabled?: boolean;
+    testOrder?: number;
 }
 
 export function After(params?: AnnotatedMethodParams): Function;
@@ -45,11 +49,10 @@ export class JutaConnectorRefs {
     static readonly BEFORE_CONNECTOR_REF: string;
     static readonly AFTER_CLASS_CONNECTOR_REF: string;
     static readonly AFTER_CONNECTOR_REF: string;
+    static readonly ASYNC_CONNECTOR_REF: string;
 }
 
-export interface AnnotatedMethod {
-    name: string;
-    timeout: number;
+export interface AnnotatedMethod extends TestableMethod {
     type: number;
 }
 
@@ -59,13 +62,21 @@ export interface RunableTestSuite {
     getTestMethods(): TestMethod[];
     getDescription(): string;
     getAnnotatedMethods(): AnnotatedMethod[];
+    isDisabled(): boolean;
+    getTestOrder(): number;
 }
 
-export interface TestMethod {
-    description: string;
+export interface TestableMethod {
     name: string;
-    repeat: number;
     timeout: number;
+    async: boolean;
+    disabled: boolean;
+}
+
+export interface TestMethod extends TestableMethod {
+    description: string;
+    repeat: number;
+    order: number;
 }
 
 export interface TestRunner {
@@ -78,6 +89,14 @@ export enum AnnotatedMethodType {
     AFTER_CLASS = 1,
     BEFORE = 2,
     AFTER = 3,
+}
+
+export enum TestSorters {
+    DEFAULT = 0,
+    NAME_ASCENDING = 1,
+    NAME_DESCENDING = 2,
+    ORDER_ASCENDING = 3,
+    ORDER_DESCENDING = 4,
 }
 
 }

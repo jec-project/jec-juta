@@ -23,7 +23,19 @@
 export interface AnnotatedMethodParams {
   
   /**
-   * The timeout for an annotated method.
+   * The timeout for an asynchronous annotated method.
    */
   timeout?:number;
+  
+  /**
+   * Defines whether the annotated method is asynchronous (<code>true</code>),
+   * or not (<code>false</code>).
+   */
+  async?:boolean;
+
+  /**
+   * Indicates whether a test method has to be ignored (<code>true</code>), or
+   * not (<code>false</code>).
+   */
+  disabled?: boolean;
 }

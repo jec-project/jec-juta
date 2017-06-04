@@ -14,24 +14,14 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {RunableTestSuite} from "./RunableTestSuite";
+import {TestableMethod} from "./TestableMethod";
 
 /**
  * The <code>AnnotatedMethod</code> defines the basic set of APIs you must 
  * implement to create wrappers for adding initialization methods to a test 
  * suite in the JUTA specification.
  */
-export interface AnnotatedMethod {
-
-  /**
-   * The name of this annotated method.
-   */
-  name:string;
-  
-  /**
-   * The timeout for this annotated method.
-   */
-  timeout:number;
+export interface AnnotatedMethod extends TestableMethod {
   
   /**
    * Defines the type of this annotated method. Valid values are constants of

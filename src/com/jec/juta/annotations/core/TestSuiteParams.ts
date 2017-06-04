@@ -25,9 +25,15 @@ export interface TestSuiteParams {
    * The desciption for a test suite.
    */
   description:string;
-  
+
   /**
-   * The timeout for a test suite.
+   * Indicates whether a test suite has to be ignored (<code>true</code>), or 
+   * not (<code>false</code>).
    */
-  timeout?:number;
+  disabled?:boolean;
+
+  /**
+   * Changes the test execution order.
+   */
+  testOrder?:number;
 }

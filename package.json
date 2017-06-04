@@ -44,6 +44,6 @@
     "typings": "^2.1.1"
   },
   "peerDependencies": {
-    "jec-commons": "^1.0.3"
+    "jec-commons": "^1.0.4"
   }
 }

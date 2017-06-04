@@ -14,14 +14,14 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {RunableTestSuite} from "./RunableTestSuite";
+import {TestableMethod} from "./TestableMethod";
 
 /**
  * The <code>TestMethod</code> defines the basic set of APIs you must implement 
  * to create wrappers for testing methods of a test suite in the JUTA
  * specification.
  */
-export interface TestMethod {
+export interface TestMethod extends TestableMethod {
 
   /**
    * Defines the description of this test method.
@@ -29,17 +29,12 @@ export interface TestMethod {
   description:string;
   
   /**
-   * The name of this test method.
-   */
-  name:string;
-  
-  /**
-   * The timeout for this test method.
-   */
-  timeout:number;
-  
-  /**
    * Defines the number of repetitions for this test method.
    */
   repeat:number;
+
+  /**
+   * Defines the execution order for this test method.
+   */
+  order:number;
 }

@@ -31,7 +31,9 @@ export {JutaConnectorRefs} from "./jcad/JutaConnectorRefs";
 //--> com/jec/juta/runner
 export {AnnotatedMethod} from "./runner/AnnotatedMethod";
 export {RunableTestSuite} from "./runner/RunableTestSuite";
+export {TestableMethod} from "./runner/TestableMethod";
 export {TestMethod} from "./runner/TestMethod";
 export {TestRunner} from "./runner/TestRunner";
 //--> com/jec/juta/utils
 export {AnnotatedMethodType} from "./utils/AnnotatedMethodType";
+export {TestSorters} from "./utils/TestSorters";

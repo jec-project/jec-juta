@@ -14,26 +14,13 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {AnnotatedMethodParams} from "./AnnotatedMethodParams";
-
-/**
- * The <code>TestParams</code> interface defines the API you must implement to 
- * create objects passed as parameter of the JUTA <code>@Test</code> decorator.
+/*!
+ * This module constains utilities used by the TestSortersTest test suite.
  */
-export interface TestParams extends AnnotatedMethodParams {
-  
-  /**
-   * The desciption for a test method.
-   */
-  description:string;
-  
-  /**
-   * The number of repetitions for an annotated method.
-   */
-  repeat?:number;
-  
-  /**
-   * The execution order for a test method.
-   */
-  order?:number;
-}
+
+// Utilities:
+export const DEFAULT:number = 0;
+export const NAME_ASCENDING:number = 1;
+export const NAME_DESCENDING:number = 2;
+export const ORDER_ASCENDING:number = 3;
+export const ORDER_DESCENDING:number = 4;
