@@ -1,5 +1,14 @@
 # JEC JUTA Project: Update Release Notes
 
+<a name="jec-juta-1.0.2"></a>
+## **1.0.1** (2017-06-5)
+
+### Bug Fixes
+
+### Features
+
+- **TestStats:** the TestStats interface provides information about the current test process
+
 <a name="jec-juta-1.0.1"></a>
 ## **1.0.1** (2017-05-28)
 

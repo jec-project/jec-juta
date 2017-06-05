@@ -1,6 +1,6 @@
 {
   "name": "jec-juta",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JEC JUTA - A simple API to write repeatable tests over common JavaScript unit testing frameworks.",
   "main": "lib/com/jec/juta/index",
   "types": "types/jec-juta.d.ts",
