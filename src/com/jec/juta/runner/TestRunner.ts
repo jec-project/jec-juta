@@ -15,6 +15,7 @@
 //   limitations under the License.
 
 import {RunableTestSuite} from "./RunableTestSuite";
+import {TestStats} from "./TestStats";
 
 /**
  * The <code>TestRunner</code> defines the basic set of APIs you must implement 
@@ -28,11 +29,13 @@ export interface TestRunner {
    * @param {RunableTestSuite} testSuite the reference to the test suite to
    *                                     execute.
    * @param {Function} callback the callback method called an the end of the
-   *                            process. This function takes an object parameter
-   *                            which represents an error message whether the
-   *                            process failed.
+   *                            process. This function takes a
+   *                            <code>TestStats</code> object parameter which
+   *                            contains informations about the test suites
+   *                            invocation, including an error message whether 
+   *                            the process failed.
    */
-  runTest(testSuite:RunableTestSuite, callback:(err:any)=>void):void;
+  runTest(testSuite:RunableTestSuite, callback:(stats:TestStats)=>void):void;
   
   /**
    * Performs testing operations for all of the specified test suite in the
@@ -42,9 +45,12 @@ export interface TestRunner {
    *                                           reference to the test suites to
    *                                           execute.
    * @param {Function} callback the callback method called an the end of the
-   *                            process. This function takes an object parameter
-   *                            which represents an error message whether the
-   *                            process failed.
+   *                            process. This function takes a
+   *                            <code>TestStats</code> object parameter which
+   *                            contains informations about the test suites
+   *                            invocation, including an error message whether 
+   *                            the process failed.
    */
-  runAllTests(testSuiteColl:RunableTestSuite[], callback:(err:any)=>void):void;
+  runAllTests(testSuiteColl:RunableTestSuite[],
+                                         callback:(stats:TestStats)=>void):void;
 }

@@ -34,6 +34,7 @@ export {RunableTestSuite} from "./runner/RunableTestSuite";
 export {TestableMethod} from "./runner/TestableMethod";
 export {TestMethod} from "./runner/TestMethod";
 export {TestRunner} from "./runner/TestRunner";
+export {TestStats} from "./runner/TestStats";
 //--> com/jec/juta/utils
 export {AnnotatedMethodType} from "./utils/AnnotatedMethodType";
 export {TestSorters} from "./utils/TestSorters";

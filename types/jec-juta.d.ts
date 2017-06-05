@@ -80,8 +80,19 @@ export interface TestMethod extends TestableMethod {
 }
 
 export interface TestRunner {
-    runTest(testSuite: RunableTestSuite, callback: (err: any) => void): void;
-    runAllTests(testSuiteColl: RunableTestSuite[], callback: (err: any) => void): void;
+    runTest(testSuite: RunableTestSuite, callback: (stats: TestStats) => void): void;
+    runAllTests(testSuiteColl: RunableTestSuite[], callback: (stats: TestStats) => void): void;
+}
+
+export interface TestStats {
+    numTestSuites: number;
+    numDisabledTestSuites: number;
+    numTests: number;
+    numAsyncTests :number;
+    numDisabledTests :number;
+    duration :number;
+    time :string;
+    error: any;
 }
 
 export enum AnnotatedMethodType {
