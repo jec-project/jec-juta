@@ -64,7 +64,13 @@ To execute all unit tests, use:
 $ grunt test
 ```
 
-## API Reference
+## Documentation
+
+### Wiki
+
+Complete documentation and tutorials are available on the JUTA wiki at [https://github.com/pechemann/jec-juta/wiki](https://github.com/pechemann/jec-juta/wiki).
+
+### API Reference
 
 The API Reference documentation is not included into the JEC JUTA node module. To build the API reference documentation, use:
 
