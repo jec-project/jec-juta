@@ -31,8 +31,8 @@ types/temp
 # Documentation
 #####################################
 
-# Ignore docs folder
-docs
+# Ignore api-reference folder
+docs/api-reference
 
 #####################################
 # node_modules
