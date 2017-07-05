@@ -13,7 +13,6 @@ export const TEST_PARAMS:TestParams = {
 };
 
 export const TEST_SUITE_PARAMS:TestSuiteParams = {
-  timeout: 100,
   description: "Test Suite Params Description"
 };
 

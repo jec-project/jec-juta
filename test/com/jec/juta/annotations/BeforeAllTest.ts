@@ -21,17 +21,17 @@ import {JutaConnectorRefs} from "../../../../../src/com/jec/juta/jcad/JutaConnec
 import {DecoratorConnectorManager, JcadContextManager, JcadContext} from "jec-commons";
 
 // Annotation to test:
-import * as AfterClassAnnotation from "../../../../../src/com/jec/juta/annotations/AfterClass";
+import * as BeforeAllAnnotation from "../../../../../src/com/jec/juta/annotations/BeforeAll";
 
 // Utilities:
-import * as utils from "../../../../../utils/test-utils/utilities/AfterClassTestUtils";
+import * as utils from "../../../../../utils/test-utils/utilities/BeforeAllTestUtils";
 
 // Chai declarations:
 const expect:any = chai.expect;
 chai.use(spies);
 
 // Test:
-describe("AfterClass", ()=> {
+describe("BeforeAll", ()=> {
 
   let context:JcadContext = null;
 
@@ -47,19 +47,19 @@ describe("AfterClass", ()=> {
     utils.buildClassRef();
   });
 
-  describe("@AfterClass", ()=> {
+  describe("@BeforeAll", ()=> {
 
     let ctxmSpy:any = chai.spy.on(JcadContextManager.getInstance(), "getContext");
     let dcmSpy:any = chai.spy.on(DecoratorConnectorManager.getInstance(), "getDecorator");
     let decoratorSpy:any = chai.spy.on(utils.TEST_DECORATOR, "decorate");
-    let annotationSpy:any = chai.spy.on(AfterClassAnnotation, "AfterClass");
+    let annotationSpy:any = chai.spy.on(BeforeAllAnnotation, "BeforeAll");
 
-    it("should invoke the JcadContextManager with the JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF reference", function() {
-      expect(ctxmSpy).to.have.been.called.with(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF);
+    it("should invoke the JcadContextManager with the JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF reference", function() {
+      expect(ctxmSpy).to.have.been.called.with(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF);
     });
     
-    it("should invoke the DecoratorConnectorManager with the JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF reference and the correct JCAD context", function() {
-      expect(dcmSpy).to.have.been.called.with(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF, context);
+    it("should invoke the DecoratorConnectorManager with the JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF reference and the correct JCAD context", function() {
+      expect(dcmSpy).to.have.been.called.with(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, context);
     });
     
     it("should invoke the annotation decorator with the right parameters", function() {

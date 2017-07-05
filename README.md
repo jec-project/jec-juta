@@ -85,7 +85,7 @@ The documentation generator is [TypeDoc](http://typedoc.org/)
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.3](CHANGELOG.md#jec-juta-1.0.3)
+**Current stable release:** [1.1.0](CHANGELOG.md#jec-juta-1.1.0)
  
 For a complete listing of release notes for all JEC JUTA update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 

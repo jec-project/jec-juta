@@ -1,7 +1,17 @@
 # JEC JUTA Project: Update Release Notes
 
+<a name="jec-juta-1.1.0"></a>
+## **1.1.0** (2017-05-06)
+
+### Bug Fixes
+
+### Features
+
+- **@AfterAll, @BeforeAll:** new annotations for declaring test fixtures
+- **@AfterClass, @BeforeClass:** boths annotations are now associated with static methods
+
 <a name="jec-juta-1.0.3"></a>
-## **1.0.3** (2017-06-5)
+## **1.0.3** (2017-06-05)
 
 ### Bug Fixes
 
@@ -10,7 +20,7 @@
 - Dependencies upgrade
 
 <a name="jec-juta-1.0.2"></a>
-## **1.0.2** (2017-06-5)
+## **1.0.2** (2017-06-05)
 
 ### Bug Fixes
 

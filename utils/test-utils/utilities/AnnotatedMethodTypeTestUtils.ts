@@ -20,7 +20,7 @@
  */
 
 // Utilities:
-export const BEFORE_CLASS:number = 0;
-export const AFTER_CLASS:number = 1;
-export const BEFORE:number = 2;
-export const AFTER:number = 3;
+export const BEFORE_ALL:number = 2;
+export const AFTER_ALL:number = 3;
+export const BEFORE:number = 4;
+export const AFTER:number = 5;

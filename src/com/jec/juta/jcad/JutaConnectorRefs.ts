@@ -36,10 +36,10 @@ export class JutaConnectorRefs {
   
   /**
    * Defines the reference for connectors tha must be used to interact with the
-   * <code>@BeforeClass</code> decorator.
+   * <code>@BeforeAll</code> decorator.
    */
-  public static readonly BEFORE_CLASS_CONNECTOR_REF:string =
-                                         "com.jec.juta.annotations.BeforeClass";
+  public static readonly BEFORE_ALL_CONNECTOR_REF:string =
+                                           "com.jec.juta.annotations.BeforeAll";
   
   /**
    * Defines the reference for connectors tha must be used to interact with the
@@ -50,10 +50,10 @@ export class JutaConnectorRefs {
 
   /**
    * Defines the reference for connectors tha must be used to interact with the
-   * <code>@AfterClass</code> decorator.
+   * <code>@AfterAll</code> decorator.
    */
-  public static readonly AFTER_CLASS_CONNECTOR_REF:string =
-                                          "com.jec.juta.annotations.AfterClass";
+  public static readonly AFTER_ALL_CONNECTOR_REF:string =
+                                            "com.jec.juta.annotations.AfterAll";
   
   /**
    * Defines the reference for connectors tha must be used to interact with the

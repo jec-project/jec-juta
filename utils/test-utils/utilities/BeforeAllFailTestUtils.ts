@@ -14,16 +14,16 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import "mocha";
-import {expect} from "chai";
+import {ClassLoader} from "jec-commons";
+
+/*!
+ * This module constains utilities used by the BeforeAllFailTest test suite.
+ */
 
 // Utilities:
-import * as utils from "../../../../../utils/test-utils/utilities/AfterClassFailTestUtils";
-
-// Test:
-describe("@AfterClass", ()=> {
-
-  it("should throw an error since no context has been declared for this decorator", function() {
-    expect(utils.buildClassRef).to.throw(Error);
-  });
-});
+const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/BeforeAllTestClass";
+const LOADER:ClassLoader = new ClassLoader();
+export const buildClassRef:Function = function():void {
+  let ClassRef:any = LOADER.loadClass(VALID_CLASS);
+  new ClassRef();
+};

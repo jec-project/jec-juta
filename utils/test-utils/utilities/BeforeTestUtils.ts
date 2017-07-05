@@ -22,7 +22,7 @@ import {JutaConnectorRefs} from "../../../src/com/jec/juta/jcad/JutaConnectorRef
 import {TestConnector} from "../classes/TestConnector";
 
 /*!
- * This module constains utilities used by the BeforeClassTest test suite.
+ * This module constains utilities used by the BeforeTest test suite.
  */
 
 // Utilities:

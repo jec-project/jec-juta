@@ -22,33 +22,33 @@ import {JutaConnectorRefs} from "../../../src/com/jec/juta/jcad/JutaConnectorRef
 import {TestConnector} from "../classes/TestConnector";
 
 /*!
- * This module constains utilities used by the BeforeClassTest test suite.
+ * This module constains utilities used by the BeforeAllTest test suite.
  */
 
 // Utilities:
 const LOADER:ClassLoader = new ClassLoader();
-const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/BeforeClassTestClass";
+const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/BeforeAllTestClass";
 export const params:any = require("./ParamUtils");
 class TestDecorator implements Decorator {
   decorate(target:any, key:string, descriptor:PropertyDescriptor,
            params?:AnnotatedMethodParams):any { return target; }
 }
 export const TEST_DECORATOR:Decorator = new TestDecorator();
-export const KEY:string = "beforeClassMethod";
+export const KEY:string = "beforeAllMethod";
 export const buildClassRef:Function = function():void {
   let ClassRef:any = LOADER.loadClass(VALID_CLASS);
   new ClassRef();
 };
 export const initContext:Function = function():JcadContext {
   let factory:JcadContextFactory = new JcadContextFactory();
-  let connector = new TestConnector(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF, TEST_DECORATOR);
+  let connector = new TestConnector(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, TEST_DECORATOR);
   let context:JcadContext = factory.create();
   DecoratorConnectorManager.getInstance().addConnector(connector, context);
-  JcadContextManager.getInstance().addContext(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF, context);
+  JcadContextManager.getInstance().addContext(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, context);
   return context;
 }
 export const resetContext:Function = function(context:JcadContext):void {
-  JcadContextManager.getInstance().removeContext(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF);
-  DecoratorConnectorManager.getInstance().removeConnector(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF, context);
+  JcadContextManager.getInstance().removeContext(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF);
+  DecoratorConnectorManager.getInstance().removeConnector(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, context);
   context = null;
 }

@@ -18,10 +18,10 @@ import "mocha";
 import {expect} from "chai";
 
 // Utilities:
-import * as utils from "../../../../../utils/test-utils/utilities/BeforeClassFailTestUtils";
+import * as utils from "../../../../../utils/test-utils/utilities/BeforeAllFailTestUtils";
 
 // Test:
-describe("@BeforeClass", ()=> {
+describe("@BeforeAll", ()=> {
 
   it("should throw an error since no context has been declared for this decorator", function() {
     expect(utils.buildClassRef).to.throw(Error);

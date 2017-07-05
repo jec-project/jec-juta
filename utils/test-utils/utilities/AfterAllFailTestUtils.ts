@@ -17,11 +17,11 @@
 import {ClassLoader} from "jec-commons";
 
 /*!
- * This module constains utilities used by the BeforeClassFailTest test suite.
+ * This module constains utilities used by the AfterAllFailTest test suite.
  */
 
 // Utilities:
-const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/BeforeClassTestClass";
+const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/AfterAllTestClass";
 const LOADER:ClassLoader = new ClassLoader();
 export const buildClassRef:Function = function():void {
   let ClassRef:any = LOADER.loadClass(VALID_CLASS);

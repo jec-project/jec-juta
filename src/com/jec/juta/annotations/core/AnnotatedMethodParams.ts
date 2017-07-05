@@ -17,8 +17,8 @@
 /**
  * The <code>AnnotatedMethodParams</code> interface defines the API you must 
  * implement to create objects passed as parameter of the JUTA
- * <code>@Before<code>, <code>@After<code>, <code>@BeforeClass<code> and
- * <code>@AfterClass<code> decorators.
+ * <code>@Before<code>, <code>@After<code>, <code>@BeforeAll<code> and
+ * <code>@AfterAll<code> decorators.
  */
 export interface AnnotatedMethodParams {
   

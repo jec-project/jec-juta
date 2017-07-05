@@ -8,5 +8,4 @@
 declare module "jec-juta" {
 
 /*PLACEHOLDER*/
-
 }

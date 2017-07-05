@@ -12,6 +12,7 @@
 
 # Ignore TypeScript temp folder
 types/temp
+types/temp2
 
 #####################################
 # VSCE

@@ -26,12 +26,12 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>AfterClass</code> decorator defines a method in the JUTA API which 
+ * The <code>AfterAll</code> decorator defines a method in the JUTA API which 
  * is called one time after all tests run.
  * 
  * ```javascript
-AfterClass()
-public afterClassMethod():void {
+AfterAll()
+public afterAllMethod():void {
   // Config here...
 }
 ```
@@ -39,7 +39,7 @@ public afterClassMethod():void {
  * @param {AnnotatedMethodParams} params the parameters for the associated
  *                                       method.
  */
-export function AfterClass(params?:AnnotatedMethodParams):Function {
+export function AfterAll(params?:AnnotatedMethodParams):Function {
   
   return function(target:any, key:string,
                                        descriptor:PropertyDescriptor):Function {
@@ -49,8 +49,8 @@ export function AfterClass(params?:AnnotatedMethodParams):Function {
     ////////////////////////////////////////////////////////////////////////////
 
     var ctx:JcadContext =
-                   CTXM.getContext(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF);
-    return DCM.getDecorator(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF, ctx)
+                     CTXM.getContext(JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF);
+    return DCM.getDecorator(JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF, ctx)
               .decorate(target, key, descriptor, params);
   }
 }
