@@ -15,14 +15,10 @@
 //   limitations under the License.
 
 /*!
- * This module constains utilities used by the AnnotatedMethodTypeTest test
+ * This module constains utilities used by the InstanciationPolicyTest test
  * suite.
  */
 
 // Utilities:
-export const BEFORE_CLASS:number = 0;
-export const AFTER_CLASS:number = 1;
-export const BEFORE_ALL:number = 2;
-export const AFTER_ALL:number = 3;
-export const BEFORE:number = 4;
-export const AFTER:number = 5;
+export const MULTIPLE:string = "multiple";
+export const SINGLE:string = "single";

@@ -38,6 +38,12 @@ describe("JutaConnectorRefs", ()=> {
     });
   });
   
+  describe("#BEFORE_CLASS_CONNECTOR_REF", ()=> {
+    it("BEFORE_CLASS_CONNECTOR_REF should return 'com.jec.juta.annotations.BeforeClass'", function() {
+      expect(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF).to.equal(utils.BEFORE_CLASS_CONNECTOR_REF);
+    });
+  });
+
   describe("#BEFORE_ALL_CONNECTOR_REF", ()=> {
     it("BEFORE_ALL_CONNECTOR_REF should return 'com.jec.juta.annotations.BeforeAll'", function() {
       expect(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF).to.equal(utils.BEFORE_ALL_CONNECTOR_REF);
@@ -50,6 +56,12 @@ describe("JutaConnectorRefs", ()=> {
     });
   });
   
+  describe("#AFTER_CLASS_CONNECTOR_REF", ()=> {
+    it("AFTER_CLASS_CONNECTOR_REF should return 'com.jec.juta.annotations.AfterClass'", function() {
+      expect(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF).to.equal(utils.AFTER_CLASS_CONNECTOR_REF);
+    });
+  });
+
   describe("#AFTER_ALL_CONNECTOR_REF", ()=> {
     it("AFTER_ALL_CONNECTOR_REF should return 'com.jec.juta.annotations.AfterAll'", function() {
       expect(JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF).to.equal(utils.AFTER_ALL_CONNECTOR_REF);

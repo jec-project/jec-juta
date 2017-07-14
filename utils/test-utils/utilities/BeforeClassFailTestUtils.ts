@@ -14,15 +14,16 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
+import {ClassLoader} from "jec-commons";
+
 /*!
- * This module constains utilities used by the AnnotatedMethodTypeTest test
- * suite.
+ * This module constains utilities used by the BeforeClassFailTest test suite.
  */
 
 // Utilities:
-export const BEFORE_CLASS:number = 0;
-export const AFTER_CLASS:number = 1;
-export const BEFORE_ALL:number = 2;
-export const AFTER_ALL:number = 3;
-export const BEFORE:number = 4;
-export const AFTER:number = 5;
+const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/BeforeClassTestClass";
+const LOADER:ClassLoader = new ClassLoader();
+export const buildClassRef:Function = function():void {
+  let ClassRef:any = LOADER.loadClass(VALID_CLASS);
+  new ClassRef();
+};

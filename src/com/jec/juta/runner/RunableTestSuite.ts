@@ -87,4 +87,12 @@ export interface RunableTestSuite {
    * @return {number} a constant of the <code>TestSorters</code> enum.
    */
   getTestOrder():number;
+    
+  /**
+   * Returns a value the policy used to create test class instances. Valid 
+   * values are the constants of the <code>InstanciationPolicy</code> class.
+   *
+   * @return {string} a constant of the <code>InstanciationPolicy</code> class.
+   */
+  getInstanciationPolicy():string;
 }

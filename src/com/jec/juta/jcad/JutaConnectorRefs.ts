@@ -34,6 +34,14 @@ export class JutaConnectorRefs {
   public static readonly TEST_SUITE_CONNECTOR_REF:string =
                                            "com.jec.juta.annotations.TestSuite";
   
+  
+  /**
+   * Defines the reference for connectors tha must be used to interact with the
+   * <code>@BeforeClass</code> decorator.
+   */
+  public static readonly BEFORE_CLASS_CONNECTOR_REF:string =
+                                         "com.jec.juta.annotations.BeforeClass";
+
   /**
    * Defines the reference for connectors tha must be used to interact with the
    * <code>@BeforeAll</code> decorator.
@@ -47,7 +55,14 @@ export class JutaConnectorRefs {
    */
   public static readonly BEFORE_CONNECTOR_REF:string =
                                               "com.jec.juta.annotations.Before";
-
+  
+  /**
+   * Defines the reference for connectors tha must be used to interact with the
+   * <code>@AfterClass</code> decorator.
+   */
+  public static readonly AFTER_CLASS_CONNECTOR_REF:string =
+                                          "com.jec.juta.annotations.AfterClass";
+ 
   /**
    * Defines the reference for connectors tha must be used to interact with the
    * <code>@AfterAll</code> decorator.

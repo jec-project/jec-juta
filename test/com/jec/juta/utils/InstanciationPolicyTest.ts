@@ -14,15 +14,27 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-/*!
- * This module constains utilities used by the AnnotatedMethodTypeTest test
- * suite.
- */
+import "mocha";
+import {expect} from "chai";
+
+// Class to test:
+import {InstanciationPolicy} from "../../../../../src/com/jec/juta/utils/InstanciationPolicy";
 
 // Utilities:
-export const BEFORE_CLASS:number = 0;
-export const AFTER_CLASS:number = 1;
-export const BEFORE_ALL:number = 2;
-export const AFTER_ALL:number = 3;
-export const BEFORE:number = 4;
-export const AFTER:number = 5;
+import * as utils from "../../../../../utils/test-utils/utilities/InstanciationPolicyTestUtils";
+
+// Test:
+describe("InstanciationPolicy", ()=> {
+
+  describe("#MULTIPLE", ()=> {
+    it("MULTIPLE should return 'multiple'", function() {
+      expect(InstanciationPolicy.MULTIPLE).to.equal(utils.MULTIPLE);
+    });
+  });
+  
+  describe("#SINGLE", ()=> {
+    it("SINGLE should return 'single'", function() {
+      expect(InstanciationPolicy.SINGLE).to.equal(utils.SINGLE);
+    });
+  });
+});

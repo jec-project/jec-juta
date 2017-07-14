@@ -15,31 +15,23 @@
 //   limitations under the License.
 
 /**
- * The <code>TestSuiteParams</code> interface defines the API you must implement  
- * to create objects passed as parameter of the JUTA <code>@TestSuite</code>
- * decorator.
+ * The <code>InstanciationPolicy</code> class contains constant values that are
+ * used to specify the way a test runner instantiate test classes. You use
+ * <code>InstanciationPolicy</code> constant to set the
+ * <code>instanciationPolicy</code> property of the <code>TestSuiteParams</code>
+ * interface.
  */
-export interface TestSuiteParams {
+export class InstanciationPolicy {
+
+  /**
+   * Indicates that the test runner creates a new instance of the test class for
+   * each <code>@Test</code> annotation.
+   */
+  public static readonly MULTIPLE:string = "multiple";
   
   /**
-   * The desciption for a test suite.
+   * Indicates that the test runner creates a single instance of the test class 
+   * for all <code>@Test</code> annotations.
    */
-  description:string;
-
-  /**
-   * Indicates whether a test suite has to be ignored (<code>true</code>), or 
-   * not (<code>false</code>).
-   */
-  disabled?:boolean;
-
-  /**
-   * Changes the test execution order.
-   */
-  testOrder?:number;
-
-  /**
-   * Indicates the policy used to create test class instances. Valid values are
-   * the constants of the <code>InstanciationPolicy</code> class.
-   */
-  instanciationPolicy?:string;
+  public static readonly SINGLE:string = "single";
 }

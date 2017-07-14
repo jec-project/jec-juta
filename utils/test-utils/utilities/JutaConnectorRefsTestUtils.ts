@@ -21,8 +21,10 @@
 // Utilities:
 export const TEST_CONNECTOR_REF:string = "com.jec.juta.annotations.Test";
 export const TEST_SUITE_CONNECTOR_REF:string = "com.jec.juta.annotations.TestSuite";
+export const BEFORE_CLASS_CONNECTOR_REF:string = "com.jec.juta.annotations.BeforeClass";
 export const BEFORE_ALL_CONNECTOR_REF:string = "com.jec.juta.annotations.BeforeAll";
 export const BEFORE_CONNECTOR_REF:string = "com.jec.juta.annotations.Before";
+export const AFTER_CLASS_CONNECTOR_REF:string = "com.jec.juta.annotations.AfterClass";
 export const AFTER_ALL_CONNECTOR_REF:string = "com.jec.juta.annotations.AfterAll";
 export const AFTER_CONNECTOR_REF:string = "com.jec.juta.annotations.After";
 export const ASYNC_CONNECTOR_REF:string = "com.jec.juta.annotations.Async";

@@ -26,6 +26,18 @@ import * as utils from "../../../../../utils/test-utils/utilities/AnnotatedMetho
 // Test:
 describe("AnnotatedMethodType", ()=> {
 
+  describe("#BEFORE_CLASS", ()=> {
+    it("BEFORE_CLASS should return 0", function() {
+      expect(AnnotatedMethodType.BEFORE_CLASS).to.equal(utils.BEFORE_CLASS);
+    });
+  });
+  
+  describe("#AFTER_CLASS", ()=> {
+    it("AFTER_CLASS should return 1", function() {
+      expect(AnnotatedMethodType.AFTER_CLASS).to.equal(utils.AFTER_CLASS);
+    });
+  });
+  
   describe("#BEFORE_ALL", ()=> {
     it("BEFORE_ALL should return 2", function() {
       expect(AnnotatedMethodType.BEFORE_ALL).to.equal(utils.BEFORE_ALL);

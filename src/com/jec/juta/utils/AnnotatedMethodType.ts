@@ -24,12 +24,12 @@ export enum AnnotatedMethodType {
   /**
    * Specifies the type for a <code>@BeforeClass</code> annotation.
    */
-  //BEFORE_CLASS = 0,
+  BEFORE_CLASS = 0,
 
   /**
    * Specifies the type for a <code>@AfterClass</code> annotation.
    */
-  //AFTER_CLASS = 1,
+  AFTER_CLASS = 1,
 
   /**
    * Specifies the type for a <code>@BeforeAll</code> annotation.

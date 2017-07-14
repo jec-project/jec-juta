@@ -1,5 +1,17 @@
 # JEC JUTA Project: Update Release Notes
 
+<a name="jec-juta-1.1.1"></a>
+## **1.1.1** (2017-06-07)
+
+### Bug Fixes
+
+### Features
+
+- **instanciationPolicy:** new `instanciationPolicy` parameter in the `TestSuiteParams` interface
+- **InstanciationPolicy:** new `InstanciationPolicy` static class in the `com.jec.juta.utils` package
+- **@AfterClass:** refactoring of the `@AfterClass` decorator
+- **@BeforeClass:** refactoring of the `@BeforeClass` decorator
+
 <a name="jec-juta-1.1.0"></a>
 ## **1.1.0** (2017-05-06)
 

@@ -19,10 +19,12 @@ export {TestSuiteParams} from "./annotations/core/TestSuiteParams";
 //--> com/jec/juta/annotations
 export {After} from "./annotations/After";
 export {Async} from "./annotations/Async";
+export {AfterClass} from "./annotations/AfterClass";
 export {AfterAll} from "./annotations/AfterAll";
 //export {AfterClass} from "./annotations/AfterClass";
 export {Before} from "./annotations/Before";
 export {BeforeAll} from "./annotations/BeforeAll";
+export {BeforeClass} from "./annotations/BeforeClass";
 export {Test} from "./annotations/Test";
 export {TestSuite} from "./annotations/TestSuite";
 //--> com/jec/juta/exceptions
@@ -37,5 +39,6 @@ export {TestMethod} from "./runner/TestMethod";
 export {TestRunner} from "./runner/TestRunner";
 export {TestStats} from "./runner/TestStats";
 //--> com/jec/juta/utils
+export {InstanciationPolicy} from "./utils/InstanciationPolicy";
 export {AnnotatedMethodType} from "./utils/AnnotatedMethodType";
 export {TestSorters} from "./utils/TestSorters";
