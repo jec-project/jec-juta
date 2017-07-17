@@ -15,7 +15,7 @@
 //   limitations under the License.
 
 /*!
- * This module constains utilities used by the InstanciationPolicyTest test
+ * This module constains utilities used by the InstantiationPolicyTest test
  * suite.
  */
 

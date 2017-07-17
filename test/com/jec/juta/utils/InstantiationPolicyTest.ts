@@ -18,23 +18,23 @@ import "mocha";
 import {expect} from "chai";
 
 // Class to test:
-import {InstanciationPolicy} from "../../../../../src/com/jec/juta/utils/InstanciationPolicy";
+import {InstantiationPolicy} from "../../../../../src/com/jec/juta/utils/InstantiationPolicy";
 
 // Utilities:
-import * as utils from "../../../../../utils/test-utils/utilities/InstanciationPolicyTestUtils";
+import * as utils from "../../../../../utils/test-utils/utilities/InstantiationPolicyTestUtils";
 
 // Test:
-describe("InstanciationPolicy", ()=> {
+describe("InstantiationPolicy", ()=> {
 
   describe("#MULTIPLE", ()=> {
     it("MULTIPLE should return 'multiple'", function() {
-      expect(InstanciationPolicy.MULTIPLE).to.equal(utils.MULTIPLE);
+      expect(InstantiationPolicy.MULTIPLE).to.equal(utils.MULTIPLE);
     });
   });
   
   describe("#SINGLE", ()=> {
     it("SINGLE should return 'single'", function() {
-      expect(InstanciationPolicy.SINGLE).to.equal(utils.SINGLE);
+      expect(InstantiationPolicy.SINGLE).to.equal(utils.SINGLE);
     });
   });
 });

@@ -15,13 +15,13 @@
 //   limitations under the License.
 
 /**
- * The <code>InstanciationPolicy</code> class contains constant values that are
+ * The <code>InstantiationPolicy</code> class contains constant values that are
  * used to specify the way a test runner instantiate test classes. You use
- * <code>InstanciationPolicy</code> constant to set the
- * <code>instanciationPolicy</code> property of the <code>TestSuiteParams</code>
+ * <code>InstantiationPolicy</code> constant to set the
+ * <code>instantiationPolicy</code> property of the <code>TestSuiteParams</code>
  * interface.
  */
-export class InstanciationPolicy {
+export class InstantiationPolicy {
 
   /**
    * Indicates that the test runner creates a new instance of the test class for

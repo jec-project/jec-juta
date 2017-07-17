@@ -90,9 +90,9 @@ export interface RunableTestSuite {
     
   /**
    * Returns a value the policy used to create test class instances. Valid 
-   * values are the constants of the <code>InstanciationPolicy</code> class.
+   * values are the constants of the <code>InstantiationPolicy</code> class.
    *
-   * @return {string} a constant of the <code>InstanciationPolicy</code> class.
+   * @return {string} a constant of the <code>InstantiationPolicy</code> class.
    */
-  getInstanciationPolicy():string;
+  getInstantiationPolicy():string;
 }

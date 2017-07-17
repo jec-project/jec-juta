@@ -39,6 +39,6 @@ export {TestMethod} from "./runner/TestMethod";
 export {TestRunner} from "./runner/TestRunner";
 export {TestStats} from "./runner/TestStats";
 //--> com/jec/juta/utils
-export {InstanciationPolicy} from "./utils/InstanciationPolicy";
+export {InstantiationPolicy} from "./utils/InstantiationPolicy";
 export {AnnotatedMethodType} from "./utils/AnnotatedMethodType";
 export {TestSorters} from "./utils/TestSorters";

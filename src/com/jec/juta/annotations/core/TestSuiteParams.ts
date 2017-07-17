@@ -39,7 +39,7 @@ export interface TestSuiteParams {
 
   /**
    * Indicates the policy used to create test class instances. Valid values are
-   * the constants of the <code>InstanciationPolicy</code> class.
+   * the constants of the <code>InstantiationPolicy</code> class.
    */
-  instanciationPolicy?:string;
+  instantiationPolicy?:string;
 }
