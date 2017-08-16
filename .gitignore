@@ -43,6 +43,16 @@ docs/api-reference
 node_modules
 
 #####################################
+# build process
+#####################################
+
+# Ignore lib folder
+lib
+
+# Ignore types folder
+types
+
+#####################################
 # src
 #####################################
 

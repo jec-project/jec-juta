@@ -1,5 +1,16 @@
 # JEC JUTA Project: Update Release Notes
 
+<a name="jec-juta-1.1.3"></a>
+## **1.1.3** (2017-08-16)
+
+### Bug Fixes
+
+### Features
+
+- **build**: adding build script to npm install process for GlassCat instal optimisation
+- **index.ts**: refactoring index.ts file for better types generation
+- Dependencies upgrade
+
 <a name="jec-juta-1.1.2"></a>
 ## **1.1.2** (2017-07-17)
 

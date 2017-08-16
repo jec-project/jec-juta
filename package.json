@@ -1,11 +1,12 @@
 {
   "name": "jec-juta",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "JEC JUTA - A simple API to write repeatable tests over common JavaScript unit testing frameworks.",
-  "main": "lib/com/jec/juta/index",
+  "main": "lib/com/jec/jec-juta-index",
   "types": "types/jec-juta.d.ts",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "postinstall": "grunt build"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
   },
   "homepage": "https://github.com/pechemann/jec-juta#readme",
   "dependencies": {
-    "jec-commons": "^1.1.1"
+    "jec-commons": "^1.1.3"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.41",
@@ -44,10 +45,9 @@
     "grunt-typedoc": "^0.2.4",
     "mocha": "^3.3.0",
     "typedoc": "^0.6.0",
-    "typescript": "^2.3.2",
-    "typings": "^2.1.1"
+    "typescript": "^2.4.2"
   },
   "peerDependencies": {
-    "jec-commons": "^1.1.2"
+    "jec-commons": "^1.1.3"
   }
 }
