@@ -1,6 +1,6 @@
 {
   "name": "jec-juta",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "JEC JUTA - A simple API to write repeatable tests over common JavaScript unit testing frameworks.",
   "main": "dist/com/jec/jec-juta-index",
   "types": "types/jec-juta.d.ts",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/pechemann/jec-juta#readme",
   "dependencies": {
-    "jec-commons": "^1.1.6"
+    "jec-commons": "^1.1.7"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.41",
