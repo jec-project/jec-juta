@@ -14,7 +14,7 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import {ClassLoader} from "jec-commons";
+import {ClassLoader, DefaultClassLoader} from "jec-commons";
 
 /*!
  * This module constains utilities used by the AfterAllFailTest test suite.
@@ -22,7 +22,7 @@ import {ClassLoader} from "jec-commons";
 
 // Utilities:
 const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/AfterAllTestClass";
-const LOADER:ClassLoader = new ClassLoader();
+const LOADER:ClassLoader = new DefaultClassLoader();
 export const buildClassRef:Function = function():void {
   let ClassRef:any = LOADER.loadClass(VALID_CLASS);
   new ClassRef();

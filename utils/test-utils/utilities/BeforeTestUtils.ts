@@ -16,7 +16,7 @@
 
 import {ClassLoader, DecoratorConnectorManager, JcadContextManager,
         AbstractDecoratorConnector, Decorator, JcadContextFactory,
-        DecoratorConnector, JcadContext} from "jec-commons";
+        DecoratorConnector, JcadContext, DefaultClassLoader} from "jec-commons";
 import {AnnotatedMethodParams} from "../../../src/com/jec/juta/annotations/core/AnnotatedMethodParams";
 import {JutaConnectorRefs} from "../../../src/com/jec/juta/jcad/JutaConnectorRefs";
 import {TestConnector} from "../classes/TestConnector";
@@ -26,7 +26,7 @@ import {TestConnector} from "../classes/TestConnector";
  */
 
 // Utilities:
-const LOADER:ClassLoader = new ClassLoader();
+const LOADER:ClassLoader = new DefaultClassLoader();
 const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/BeforeTestClass";
 export const params:any = require("./ParamUtils");
 class TestDecorator implements Decorator {
