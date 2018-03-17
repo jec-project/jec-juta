@@ -48,7 +48,7 @@ export function Test(params:TestParams):Function {
     // JCAD API
     ////////////////////////////////////////////////////////////////////////////
 
-    var ctx:JcadContext = CTXM.getContext(JutaConnectorRefs.TEST_CONNECTOR_REF);
+    const ctx:JcadContext = CTXM.getContext(JutaConnectorRefs.TEST_CONNECTOR_REF);
     return DCM.getDecorator(JutaConnectorRefs.TEST_CONNECTOR_REF, ctx)
               .decorate(target, key, descriptor, params);
   }

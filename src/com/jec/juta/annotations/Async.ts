@@ -52,7 +52,7 @@ export function Async(target:Object, propertyKey:string | symbol,
   // CAD API
   //////////////////////////////////////////////////////////////////////////////
 
-  var ctx:JcadContext = CTXM.getContext(JutaConnectorRefs.ASYNC_CONNECTOR_REF);
+  const ctx:JcadContext = CTXM.getContext(JutaConnectorRefs.ASYNC_CONNECTOR_REF);
   DCM.getDecorator(JutaConnectorRefs.ASYNC_CONNECTOR_REF, ctx)
      .decorate(target, propertyKey, parameterIndex);
 }

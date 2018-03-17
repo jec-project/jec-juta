@@ -48,7 +48,7 @@ export function AfterAll(params?:AnnotatedMethodParams):Function {
     // JCAD API
     ////////////////////////////////////////////////////////////////////////////
 
-    var ctx:JcadContext =
+    const ctx:JcadContext =
                      CTXM.getContext(JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF);
     return DCM.getDecorator(JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF, ctx)
               .decorate(target, key, descriptor, params);

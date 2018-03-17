@@ -6,7 +6,7 @@ const DCM = jec_commons_1.DecoratorConnectorManager.getInstance();
 const CTXM = jec_commons_1.JcadContextManager.getInstance();
 function BeforeAll(params) {
     return function (target, key, descriptor) {
-        var ctx = CTXM.getContext(JutaConnectorRefs_1.JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF);
+        const ctx = CTXM.getContext(JutaConnectorRefs_1.JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF);
         return DCM.getDecorator(JutaConnectorRefs_1.JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, ctx)
             .decorate(target, key, descriptor, params);
     };

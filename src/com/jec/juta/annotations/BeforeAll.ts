@@ -48,7 +48,7 @@ export function BeforeAll(params?:AnnotatedMethodParams):Function {
     // JCAD API
     ////////////////////////////////////////////////////////////////////////////
 
-    var ctx:JcadContext =
+    const ctx:JcadContext =
                     CTXM.getContext(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF);
     return DCM.getDecorator(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, ctx)
               .decorate(target, key, descriptor, params);

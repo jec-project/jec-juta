@@ -48,7 +48,7 @@ export function TestSuite(params:TestSuiteParams):Function {
     // JCAD API
     ////////////////////////////////////////////////////////////////////////////
 
-    var ctx:JcadContext =
+    const ctx:JcadContext =
                     CTXM.getContext(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF);
     return DCM.getDecorator(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF, ctx)
               .decorate(target, params);
