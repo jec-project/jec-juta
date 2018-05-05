@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pechemann/jec-juta.git"
+    "url": "git+https://github.com/jec-project/jec-juta.git"
   },
   "keywords": [
     "JEC",
@@ -25,9 +25,9 @@
   "author": "Pascal ECHEMANN",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/pechemann/jec-juta/issues"
+    "url": "https://github.com/jec-project/jec-juta/issues"
   },
-  "homepage": "https://github.com/pechemann/jec-juta#readme",
+  "homepage": "https://github.com/jec-project/jec-juta#readme",
   "dependencies": {
     "jec-commons": "^1.1.8"
   },
