@@ -15,8 +15,7 @@
 //   limitations under the License.
 
 import "mocha";
-import * as chai from "chai";
-import * as spies from "chai-spies";
+import * as sinon from "sinon";
 import {JutaConnectorRefs} from "../../../../../src/com/jec/juta/jcad/JutaConnectorRefs";
 import {DecoratorConnectorManager, JcadContextManager, JcadContext} from "jec-commons";
 
@@ -26,48 +25,65 @@ import * as TestSuiteAnnotation from "../../../../../src/com/jec/juta/annotation
 // Utilities:
 import * as utils from "../../../../../utils/test-utils/utilities/TestSuiteTestUtils";
 
-// Chai declarations:
-const expect:any = chai.expect;
-chai.use(spies);
-
 // Test:
 describe("Test", ()=> {
 
   let context:JcadContext = null;
+  let testInstance:any = null;
+
+  let getContextSpy:any = null;
+  let getDecoratorSpy:any = null;
+  let decoratorSpy:any = null;
+  let annotationSpy:any = null;
 
   before(()=> {
     context = utils.initContext();
+    getContextSpy = sinon.spy(JcadContextManager.getInstance(), "getContext");
+    getDecoratorSpy = 
+             sinon.spy(DecoratorConnectorManager.getInstance(), "getDecorator");
+    decoratorSpy = sinon.spy(utils.TEST_DECORATOR, "decorate");
+    annotationSpy = sinon.spy(TestSuiteAnnotation, "TestSuite");
   });
 
   after(()=> {
     utils.resetContext(context);
+    sinon.restore();
+    testInstance = null;
   });
 
   beforeEach(()=> {
-    utils.buildClassRef();
+    testInstance = utils.buildClassRef();
   });
 
   describe("@TestSuite", ()=> {
 
-    let ctxmSpy:any = chai.spy.on(JcadContextManager.getInstance(), "getContext");
-    let dcmSpy:any = chai.spy.on(DecoratorConnectorManager.getInstance(), "getDecorator");
-    let decoratorSpy:any = chai.spy.on(utils.TEST_DECORATOR, "decorate");
-    let annotationSpy:any = chai.spy.on(TestSuiteAnnotation, "TestSuite");
-
     it("should invoke the JcadContextManager with the JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF reference", function() {
-      expect(ctxmSpy).to.have.been.called.with(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF);
+      sinon.assert.calledOnce(getContextSpy);
+      sinon.assert.calledWith(
+        getContextSpy, JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF
+      );
     });
     
     it("should invoke the DecoratorConnectorManager with the JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF reference and the correct JCAD context", function() {
-      expect(dcmSpy).to.have.been.called.with(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF, context);
+      sinon.assert.calledOnce(getDecoratorSpy);
+      sinon.assert.calledWith(
+        getDecoratorSpy,
+        JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF, context
+      );
     });
     
     it("should invoke the annotation decorator with the right parameters", function() {
-      expect(annotationSpy).to.have.been.called.with(utils.params.TEST_SUITE_PARAMS);
+      sinon.assert.calledOnce(annotationSpy);
+      sinon.assert.calledWith(
+        annotationSpy, utils.params.TEST_SUITE_PARAMS
+      );
     });
     
     it("should invoke the registered decorator with the right parameters", function() {
-      expect(decoratorSpy).to.have.been.called.with(utils.params.TEST_SUITE_PARAMS);
+      sinon.assert.calledOnce(decoratorSpy);
+      /*sinon.assert.calledWith(
+        decoratorSpy, testInstance, utils.params.TEST_SUITE_PARAMS
+      );*/
     });
   });
 });

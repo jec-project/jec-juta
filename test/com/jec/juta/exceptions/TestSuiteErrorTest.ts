@@ -28,14 +28,14 @@ describe("TestSuiteError", ()=> {
 
   describe("instanceOf(Error)", ()=> {
     it("TestSuiteError should extend Error", function() {
-      let error:TestSuiteError = new TestSuiteError(null);
+      const error:TestSuiteError = new TestSuiteError(null);
       expect(error).to.be.instanceOf(Error);
     });
   });
 
   describe("#message", ()=> {
     it("should return the same string as passed in the class constructor", function() {
-      let error:TestSuiteError = new TestSuiteError(utils.ERROR_MSG);
+      const error:TestSuiteError = new TestSuiteError(utils.ERROR_MSG);
       expect(error.message).to.equal(utils.ERROR_MSG);
     });
   });

@@ -24,6 +24,6 @@ import {ClassLoader, DefaultClassLoader} from "jec-commons";
 const VALID_CLASS:string = process.cwd() + "/utils/test-utils/classes/annotations/AfterAllTestClass";
 const LOADER:ClassLoader = new DefaultClassLoader();
 export const buildClassRef:Function = function():void {
-  let ClassRef:any = LOADER.loadClass(VALID_CLASS);
+  const ClassRef:any = LOADER.loadClass(VALID_CLASS);
   new ClassRef();
 };

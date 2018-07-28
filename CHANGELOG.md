@@ -1,5 +1,17 @@
 # JEC JUTA Project: Update Release Notes
 
+<a name="jec-juta-1.0.9"></a>
+## **1.0.8** (2018-07-28)
+
+### Bug Fixes
+
+- Fixing test cases issues due to dependencies upgrade
+
+### Features
+
+- Updating all dependencies
+- Test cases improvements
+
 <a name="jec-juta-1.0.8"></a>
 ## **1.0.8** (2018-07-21)
 

@@ -15,8 +15,7 @@
 //   limitations under the License.
 
 import {ClassLoader, DecoratorConnectorManager, JcadContextManager,
-        AbstractDecoratorConnector, Decorator, JcadContextFactory,
-        DecoratorConnector, JcadContext, DefaultClassLoader} from "jec-commons";
+        Decorator, JcadContextFactory, JcadContext, DefaultClassLoader} from "jec-commons";
 import {AnnotatedMethodParams} from "../../../src/com/jec/juta/annotations/core/AnnotatedMethodParams";
 import {JutaConnectorRefs} from "../../../src/com/jec/juta/jcad/JutaConnectorRefs";
 import {TestConnector} from "../classes/TestConnector";
@@ -35,14 +34,14 @@ class TestDecorator implements Decorator {
 }
 export const TEST_DECORATOR:Decorator = new TestDecorator();
 export const KEY:string = "beforeAllMethod";
-export const buildClassRef:Function = function():void {
-  let ClassRef:any = LOADER.loadClass(VALID_CLASS);
-  new ClassRef();
+export const buildClassRef:Function = function():any {
+  const ClassRef:any = LOADER.loadClass(VALID_CLASS);
+  return new ClassRef();
 };
 export const initContext:Function = function():JcadContext {
-  let factory:JcadContextFactory = new JcadContextFactory();
-  let connector = new TestConnector(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, TEST_DECORATOR);
-  let context:JcadContext = factory.create();
+  const factory:JcadContextFactory = new JcadContextFactory();
+  const connector = new TestConnector(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, TEST_DECORATOR);
+  const context:JcadContext = factory.create();
   DecoratorConnectorManager.getInstance().addConnector(connector, context);
   JcadContextManager.getInstance().addContext(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF, context);
   return context;

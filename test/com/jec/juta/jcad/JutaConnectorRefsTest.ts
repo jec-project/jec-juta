@@ -28,55 +28,73 @@ describe("JutaConnectorRefs", ()=> {
 
   describe("#TEST_CONNECTOR_REF", ()=> {
     it("TEST_CONNECTOR_REF should return 'com.jec.juta.annotations.Test'", function() {
-      expect(JutaConnectorRefs.TEST_CONNECTOR_REF).to.equal(utils.TEST_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.TEST_CONNECTOR_REF
+      ).to.equal(utils.TEST_CONNECTOR_REF);
     });
   });
   
   describe("#TEST_SUITE_CONNECTOR_REF", ()=> {
     it("TEST_SUITE_CONNECTOR_REF should return 'com.jec.juta.annotations.TestSuite'", function() {
-      expect(JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF).to.equal(utils.TEST_SUITE_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.TEST_SUITE_CONNECTOR_REF
+      ).to.equal(utils.TEST_SUITE_CONNECTOR_REF);
     });
   });
   
   describe("#BEFORE_CLASS_CONNECTOR_REF", ()=> {
     it("BEFORE_CLASS_CONNECTOR_REF should return 'com.jec.juta.annotations.BeforeClass'", function() {
-      expect(JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF).to.equal(utils.BEFORE_CLASS_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.BEFORE_CLASS_CONNECTOR_REF
+      ).to.equal(utils.BEFORE_CLASS_CONNECTOR_REF);
     });
   });
 
   describe("#BEFORE_ALL_CONNECTOR_REF", ()=> {
     it("BEFORE_ALL_CONNECTOR_REF should return 'com.jec.juta.annotations.BeforeAll'", function() {
-      expect(JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF).to.equal(utils.BEFORE_ALL_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.BEFORE_ALL_CONNECTOR_REF
+      ).to.equal(utils.BEFORE_ALL_CONNECTOR_REF);
     });
   });
   
   describe("#BEFORE_CONNECTOR_REF", ()=> {
     it("BEFORE_CONNECTOR_REF should return 'com.jec.juta.annotations.Before'", function() {
-      expect(JutaConnectorRefs.BEFORE_CONNECTOR_REF).to.equal(utils.BEFORE_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.BEFORE_CONNECTOR_REF
+      ).to.equal(utils.BEFORE_CONNECTOR_REF);
     });
   });
   
   describe("#AFTER_CLASS_CONNECTOR_REF", ()=> {
     it("AFTER_CLASS_CONNECTOR_REF should return 'com.jec.juta.annotations.AfterClass'", function() {
-      expect(JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF).to.equal(utils.AFTER_CLASS_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.AFTER_CLASS_CONNECTOR_REF
+      ).to.equal(utils.AFTER_CLASS_CONNECTOR_REF);
     });
   });
 
   describe("#AFTER_ALL_CONNECTOR_REF", ()=> {
     it("AFTER_ALL_CONNECTOR_REF should return 'com.jec.juta.annotations.AfterAll'", function() {
-      expect(JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF).to.equal(utils.AFTER_ALL_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.AFTER_ALL_CONNECTOR_REF
+      ).to.equal(utils.AFTER_ALL_CONNECTOR_REF);
     });
   });
   
   describe("#AFTER_CONNECTOR_REF", ()=> {
     it("AFTER_CONNECTOR_REF should return 'com.jec.juta.annotations.After'", function() {
-      expect(JutaConnectorRefs.AFTER_CONNECTOR_REF).to.equal(utils.AFTER_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.AFTER_CONNECTOR_REF
+      ).to.equal(utils.AFTER_CONNECTOR_REF);
     });
   });
 
   describe("#ASYNC_CONNECTOR_REF", ()=> {
     it("ASYNC_CONNECTOR_REF should return 'com.jec.juta.annotations.Async'", function() {
-      expect(JutaConnectorRefs.ASYNC_CONNECTOR_REF).to.equal(utils.ASYNC_CONNECTOR_REF);
+      expect(
+        JutaConnectorRefs.ASYNC_CONNECTOR_REF
+      ).to.equal(utils.ASYNC_CONNECTOR_REF);
     });
   });
 });
