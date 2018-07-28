@@ -26,17 +26,10 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>TestSuite</code> decorator defines a test suite in the JUTA
+ * The <code>@TestSuite</code> decorator defines a test suite in the JUTA
  * specification.
  *
- * ```javascript
-TestSuite({
-  description: "Test all methods of the 'MyClass' class"
-})
-export class MyClassTest() {
-  // Test here...
-}
-```
+ * [[include:After.md]]
  *
  * @param {TestSuiteParams} params the parameters for the associated test.
  */

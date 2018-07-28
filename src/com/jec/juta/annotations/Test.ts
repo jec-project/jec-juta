@@ -26,16 +26,9 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>Test</code> decorator defines a test method in the JUTA API.
+ * The <code>@Test</code> decorator defines a test method in the JUTA API.
  *
- * ```javascript
-Test({
-  description: "should return 'Hello World!"
-})
-public methodToTest():void {
-  // Test here...
-}
-```
+ * [[include:After.md]]
  *
  * @param {TestParams} params the parameters for the associated test.
  */

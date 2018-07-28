@@ -26,15 +26,10 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>BeforeClass</code> decorator defines a static method in the JUTA  
+ * The <code>@BeforeClass</code> decorator defines a static method in the JUTA  
  * API which is called one time before all tests run.
  *
- * ```javascript
-BeforeClass()
-public static beforeClassMethod():void {
-  // Config here...
-}
-```
+ * [[include:BeforeClass.md]]
  *
  * @param {AnnotatedMethodParams} params the parameters for the associated
  *                                       method.

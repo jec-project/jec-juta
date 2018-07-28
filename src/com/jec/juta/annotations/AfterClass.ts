@@ -26,15 +26,10 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>AfterClass</code> decorator defines a static method in the JUTA API  
- * which is called one time after all tests run.
+ * The <code>@AfterClass</code> decorator defines a static method in the JUTA   
+ * API which is called one time after all tests run.
  * 
- * ```javascript
-AfterClass()
-public static afterClassMethod():void {
-  // Config here...
-}
-```
+ * [[include:AfterClass.md]]
  * 
  * @param {AnnotatedMethodParams} params the parameters for the associated
  *                                       method.

@@ -26,15 +26,10 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>BeforeAll</code> decorator defines a method in the JUTA API which 
+ * The <code>@BeforeAll</code> decorator defines a method in the JUTA API which 
  * is called one time before all tests run.
  *
- * ```javascript
-BeforeAll()
-public beforeAllMethod():void {
-  // Config here...
-}
-```
+ * [[include:BeforeAll.md]]
  *
  * @param {AnnotatedMethodParams} params the parameters for the associated
  *                                       method.

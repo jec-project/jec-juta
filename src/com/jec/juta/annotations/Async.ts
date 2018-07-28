@@ -25,20 +25,10 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>Async</code> decorator defines a callback function in the JUTA API 
+ * The <code>@Async</code> decorator defines a callback function in the JUTA API 
  * which is called after an asynchronous test is complete.
  * 
- * ```javascript
-Test({
-  description: "should return the result of an asynchronous operation"
-})
-public asyncMethod(Async callback:function):void {
-  // Config here...
-  db.find((err:any)=>{
-    callback(err);
-  });
-}
-```
+ * [[include:Async.md]]
  * 
  * @param {any} target the prototype of the class for the instance member.
  * @param {string|symbol} propertyKey the name of the member.

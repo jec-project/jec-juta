@@ -26,15 +26,10 @@ const DCM:DecoratorConnectorManager = DecoratorConnectorManager.getInstance();
 const CTXM:JcadContextManager = JcadContextManager.getInstance();
 
 /**
- * The <code>AfterAll</code> decorator defines a method in the JUTA API which 
+ * The <code>@AfterAll</code> decorator defines a method in the JUTA API which 
  * is called one time after all tests run.
  * 
- * ```javascript
-AfterAll()
-public afterAllMethod():void {
-  // Config here...
-}
-```
+ * [[include:AfterAll.md]]
  * 
  * @param {AnnotatedMethodParams} params the parameters for the associated
  *                                       method.
